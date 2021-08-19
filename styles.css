@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1b1e23;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: aliceblue;
+}
+@keyframes move-clouds-back {
+    from {background-position: 0 0;}
+    to {background-position: 10000px 0;}
+}
+
+@keyframes move-twinkle-back {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+}
+
+.stars, .twinkling, .clouds{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -5;
+}
+
+.twinkling{
+    background: transparent url(twinkling.png) repeat top center;
+    animation: move-twinkle-back 200s linear infinite;
+}
+
+.stars{
+    background: #000 url(stars.png) repeat top center;
+}
+.clouds{
+    background: transparent url(clouds.png) repeat top center;
+    animation: move-clouds-back 200s linear infinite;
+    z-index: -1;
+    opacity: 0.2;
+    
+}
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: black 2px 2px ;
+    margin: 10px;
+
+}
+
+.music-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #101010;
+    height: 500px;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 15%;
+}
+
+.cover-container{
+    
+    top: 220px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 15px;
+    transition: all 0.2s ease-in;
+}
+
+.cover{
+    width: 300px;
+    height: 300px;
+    border-radius: 2%;
+}
+
+.music-info{
+    text-align: left;
+    width: 100%;
+    padding-left: 50px;
+    font-size: 20px;
+    text-shadow: zk;
+    
+}
+
+.music-info p {
+    font-size: 16px;
+    
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 25px;
+    font-size: 20px;
+}
+.progress-container{
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    height: 4px;
+    width: 70%;
+
+}
+.progress {
+    background: yellow;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.2s linear;
+}
+.progress-conainer:hover{
+    height: 10px;
+}
+
+.btn{
+    border: none;
+    background-color: transparent    ;
+    color: white;
+    font-size: 25px;
+
+}
